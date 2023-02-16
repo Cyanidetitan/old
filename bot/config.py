@@ -23,7 +23,7 @@ try:
     OWNER = "5371981851"
     FFMPEG = config(
         "FFMPEG",
-       default='''ffmpeg -i "{}" -c:v copy -map 0:v -c:a copy -map 0:a -c:s copy -map 0:s? "{}"''',
+       default='''ffmpeg -i "{}" -filter_complex "[0:v]drawtext=fontfile=font.ttf:text='t.me/animxt':fontsize=18:fontcolor=ffffff:alpha='if(lt(t,0),0,if(lt(t,5),(t-0)/5,if(lt(t,15),1,if(lt(t,20),(5-(t-15))/5,0))))':x=w-text_w-15:y=15" -c:v libx265 -preset medium -pix_fmt yuv420p10le -r 24000/1001 -crf 25 -x265-params deblock=-1,-1:no-sao:aq-mode=2:aq-strength=0.90:frame-threads=4:no-info=1 -c:a libopus -b:a 80k "{}" -y''',
     )
     THUMB = config(
         "THUMBNAIL", default="www.google.com"
