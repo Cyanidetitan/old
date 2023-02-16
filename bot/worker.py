@@ -17,7 +17,7 @@
 from .FastTelethon import download_file, upload_file
 from .funcn import *
 
-encode_id = -1001229051778
+encode_id = -1001258776101
 async def stats(e):
     try:
         wah = e.pattern_match.group(1).decode("UTF-8")
@@ -202,7 +202,7 @@ async def encod(event):
         kk = dl.split("/")[-1]
         aa = kk.split(".")[-1]
         rr = f"encode"
-        bb = kk.replace("@Anime_Gallery", "@Animejinx")
+        bb = kk.replace(".mkv", " [720p x265] @animxt.mkv")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
