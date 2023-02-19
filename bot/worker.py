@@ -17,7 +17,7 @@
 from .FastTelethon import download_file, upload_file
 from .funcn import *
 
-encode_id = -1001258776101
+encode_id =  -1001855239636
 async def stats(e):
     try:
         wah = e.pattern_match.group(1).decode("UTF-8")
