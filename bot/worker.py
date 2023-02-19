@@ -202,7 +202,7 @@ async def encod(event):
         kk = dl.split("/")[-1]
         aa = kk.split(".")[-1]
         rr = f"encode"
-        bb = kk.replace(".mkv", " [720p x265] @AnimeMonk.mkv")
+        bb = kk.replace(".mkv", " [1080p x265] @AnimeMonk.mkv")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
