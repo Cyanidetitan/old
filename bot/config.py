@@ -23,7 +23,7 @@ try:
     OWNER = "5700625607"
     FFMPEG = config(
         "FFMPEG",
-       default='''ffmpeg -i "{}" -c:v copy -c:a copy -c:s copy  "{}" -y''',
+       default='''ffmpeg -i "{}" -c:v copy -map 0:v -c:a copy -map 0:a -c:s -copy -map 0:s? "{}" -y''',
     )
     THUMB = config(
         "THUMBNAIL", default="www.google.com"
