@@ -18,7 +18,7 @@ from decouple import config
 try:
     APP_ID = 8858279
     API_HASH = "ef28c3f458143cbcb4271a98a2e9d596"
-    BOT_TOKEN = "5912998821:AAHnfwQMIgzQ5GgaAw1iyiDIts11pn2SKkY"
+    BOT_TOKEN = "5914250912:AAH9qEA6uJHGc8z8vyzMkaQ46j6irMEGX-I"
     DEV = 1322549723
     OWNER = "5371981851"
     FFMPEG = config(
