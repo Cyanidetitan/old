@@ -13,7 +13,7 @@
 # License can be found in
 # <https://github.com/1Danish-00/CompressorQueue/blob/main/License> .
 
-
+import re
 from . import *
 from .devtools import *
 
@@ -135,7 +135,7 @@ async def something():
                 kk = dl.split("/")[-1]
                 aa = kk.split(".")[-1]
                 rr = "encode"
-                bb = kk.replace("@infinite_anime.mp4", ".mkv")
+                bb = re.sub(r'@[^[]*(\[.*\])?', '', kk)
                 out = f"{rr}/{bb}"
                 thum = "thumb.jpg"
                 dtime = ts(int((es - s).seconds) * 1000)
