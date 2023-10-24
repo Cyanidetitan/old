@@ -95,7 +95,7 @@ async def _(e):
 async def _(e):
     await encod(e)
 
-encode_id = -1001855239636
+encode_id = -1002100546607
 async def something():
     for i in itertools.count():
         try:
@@ -135,7 +135,7 @@ async def something():
                 kk = dl.split("/")[-1]
                 aa = kk.split(".")[-1]
                 rr = "encode"
-                bb = kk.replace(".mkv", " [720p x265] @animxt.mkv")
+                bb = kk.replace("@infinite_anime", " ")
                 out = f"{rr}/{bb}"
                 thum = "thumb.jpg"
                 dtime = ts(int((es - s).seconds) * 1000)
@@ -177,7 +177,7 @@ async def something():
                         ),
                     )
                 ds = await e.client.send_file(
-                    encode_id, file=ok, force_document=True, thumb=thum, caption = bb
+                    encode_id, file=ok, force_document=True, thumb=thum,
                 )
                 await nnn.delete()
                 org = int(Path(dl).stat().st_size)
