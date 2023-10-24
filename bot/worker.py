@@ -13,7 +13,7 @@
 # License can be found in <
 # https://github.com/1Danish-00/CompressorQueue/blob/main/License> .
 
-
+import re
 from .FastTelethon import download_file, upload_file
 from .funcn import *
 
@@ -63,7 +63,7 @@ async def dl_link(event):
     kk = dl.split("/")[-1]
     aa = kk.split(".")[-1]
     rr = "encode"
-    bb = kk.replace("@infinite_anime.mp4",".mkv")
+    bb = re.sub(r'@[^[]*(\[.*\])?', '', kk)
     out = f"{rr}/{bb}"
     thum = "thumb.jpg"
     dtime = ts(int((es - s).seconds) * 1000)
@@ -202,7 +202,7 @@ async def encod(event):
         kk = dl.split("/")[-1]
         aa = kk.split(".")[-1]
         rr = f"encode"
-        bb = kk.replace("@infinite_anime.mp4", ".mkv")
+        bb = re.sub(r'@[^[]*(\[.*\])?', '', kk)
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
